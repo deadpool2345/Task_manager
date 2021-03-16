@@ -1,0 +1,17 @@
+
+<html>
+  {%block content %}
+<h1>Signup details</h1>
+
+
+
+<br>
+
+<form method="POST" enctype="multipart/form-data">
+  {%csrf_token%}
+  {{form.as_p}}
+  <br>
+<button type = "submit">Submit</button>
+</form>
+{%endblock%}
+</html>

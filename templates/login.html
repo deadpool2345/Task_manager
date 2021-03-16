@@ -1,0 +1,13 @@
+<html>
+  {% block title %}<h3>Login</h3>{% endblock %}
+
+  {%block content%}
+  <form method = "POST">
+    {% csrf_token %}
+    {{form}}
+    <button type = "submit">login</button>
+  </form>
+{% endblock %}
+<p>LoggedIn User: {{user.username}}</p>
+<a href="{% url 'logout' %}">Logout</a>
+</html>
