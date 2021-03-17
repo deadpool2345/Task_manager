@@ -11,7 +11,7 @@ STATUS=(
 
 )
 class Task(models.Model):
-    assigner=models.ForeignKey(User,on_delete=models.CASCADE)
+    assigner=models.ForeignKey(User,null=True,on_delete=models.CASCADE)
     users=models.ManyToManyField(User,related_name='users')
     name=models.CharField(max_length=255)
     description=models.TextField()
