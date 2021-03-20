@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from assign import views as assign_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/',include('accounts.urls')),
-    path('assign/',include('assign.urls'))
+    path('assign/',include('assign.urls')),
+    path('',assign_views.loginPage,name='login') 
 ]

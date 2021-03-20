@@ -1,0 +1,14 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.name.label}} :  
+    {{form.name}}<br><br>
+
+    {{form.description.label}} :  
+    {{form.description}}<br><br>
+
+    {{form.users.label}}:
+    {{form.users}}<br><br>
+
+    <input type='submit' name="Create Task">
+
+</form>
