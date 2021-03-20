@@ -11,11 +11,11 @@ STATUS=(
 
 )
 class Task(models.Model):
-    assigner=models.ForeignKey(User,on_delete=models.CASCADE)
+    assigner=models.ForeignKey(User, on_delete=models.CASCADE)
     users=models.ManyToManyField(User,related_name='users')
     name=models.CharField(max_length=255)
     description=models.TextField()
-    status=models.CharField(max_length=1,choices=STATUS)
+    status=models.CharField(max_length=1,choices=STATUS,default='A')
 
     def __str__(self):
         return f'{self.name}'

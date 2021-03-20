@@ -1,0 +1,56 @@
+{%extends 'assign/base.html'%}
+
+{% block content%}
+<div class="container" style="display: flex;">
+<table class = "table">
+    <thead>
+        <tr>
+            <th>Assigned</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {%for i in tasks.assigned%}
+        <tr>
+            <td><a href="{{i.id}}">{{i.name}}</a></td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+<table class = "table">
+    <thead>
+        <tr>
+            <th>Ongoing</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {%for i in tasks.ongoing%}
+        <tr>
+            <td><a href="{{i.id}}">{{i.name}}</a></td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+<table class = "table">
+    <thead>
+        <tr>
+            <th>Completed</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {%for i in tasks.completed%}
+        <tr>
+            <td><a href="{{i.id}}">{{i.name}}</a></td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+</div>
+
+{% endblock %}
+
